@@ -105,7 +105,8 @@ Step 7: Deploy Socks Shop Application
       helm repo add microservices-demo https://microservices-demo. github.io/helm-charts/
       helm install socks-shop microservices-demo/socks-shop --namespace socks-shop --create-namespace
 
-<img src="Images/socksdeploy.png">
+
+<img src="Images/sockshop.png">
 
 
 
