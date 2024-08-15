@@ -104,6 +104,7 @@ Step 7: Deploy Socks Shop Application
 
       helm repo add microservices-demo https://microservices-demo. github.io/helm-charts/
       helm install socks-shop microservices-demo/socks-shop --namespace socks-shop --create-namespace
+
 <img src="Images/socksdeploy.png">
 
 
@@ -113,8 +114,8 @@ Step 7: Deploy Socks Shop Application
 Step 8: Setup Logging and Metrics
 Ensure that Prometheus is scraping metrics from the Socks Shop application. You may need to customize the Prometheus configuration to include the necessary metrics endpoints.
 
-Pipeline Configuration
-To automate the deployment, configure a CI/CD pipeline (e.g., using GitHub Actions, Jenkins, GitLab CI) that includes the following steps:
+ Configuration
+To automate the deployment, configure a CI/CD pipeline (e.g., using PipelineGitHub Actions, Jenkins, GitLab CI) that includes the following steps:
 
 Linting: Check the syntax of Terraform/Ansible scripts.
 Validation: Ensure the Kubernetes manifests are valid.
@@ -141,26 +142,6 @@ Socks Shop Documentation
 Step 8: Setup Logging and Metrics
 Ensure that Prometheus is scraping metrics from the Socks Shop application. You may need to customize the Prometheus configuration to include the necessary metrics endpoints.
 
-Pipeline Configuration
-To automate the deployment, configure a CI/CD pipeline (e.g., using GitHub Actions, Jenkins, GitLab CI) that includes the following steps:
-
-Linting: Check the syntax of Terraform/Ansible scripts.
-Validation: Ensure the Kubernetes manifests are valid.
-Deployment: Apply the infrastructure changes.
-
-Monitoring and Metrics
-Prometheus will monitor the application and Kubernetes cluster. Dashboards can be created in Grafana to visualize key metrics such as:
-
-CPU/Memory Usage: By each microservice.
-Request Latency: Response times for API calls.
-Error Rates: Monitor for any errors in service communication.
-Logging
-Integrate a logging solution such as Fluentd or Elasticsearch to aggregate logs from the Kubernetes cluster. Ensure logs are accessible for troubleshooting and monitoring.
-
-Security Considerations
-Network Perimeter Security: Implement firewall rules to restrict access to the cluster.
-TLS/SSL: Use Let’s Encrypt certificates to secure communication.
-Sensitive Information: Encrypt sensitive data using Ansible Vault or another secret management tool.
 
 Additional Resources
 - [Kubernetes Documentation](https://kubernetes.io/docs/home/)
